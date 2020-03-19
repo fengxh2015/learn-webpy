@@ -1,0 +1,33 @@
+$def with (name,form,result)
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta name="author" content="Neo Lee" />
+    <meta charset="utf-8" />
+    <title>Web Demo</title>
+    <link rel='stylesheet' href='/static/css/main.css' />
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+
+        $if name:
+            <em>Hello</em></em>,<span class="keyword">$name</span>!
+        $else:
+            <em>Hello</em></em>,world!
+
+        <p>Let's start <a href="https://github.com/neolee/wop-ecnu-pub">learning </a></p>
+        <hr>
+
+        <form method='POST'>
+            $:form.render()
+
+        </form>
+
+        <p>Result:<span id="result">$result</span></p>
+
+    </div> 
+        
+</body>
+</html>
